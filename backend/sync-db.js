@@ -3,6 +3,7 @@ require('./common/models/User');
 require('./common/models/Category');
 require('./common/models/Location');
 require('./common/models/Event');
+require('./common/models/Ticket');
 
 async function syncDatabase() {
   try {
