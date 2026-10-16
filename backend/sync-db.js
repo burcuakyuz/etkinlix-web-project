@@ -1,11 +1,6 @@
 const sequelize = require('./common/database');
-require('./common/models/User');
-require('./common/models/Category');
-require('./common/models/Location');
-require('./common/models/Event');
-require('./common/models/Ticket');
-require('./common/models/Registration');
-require('./common/models/Payment');
+
+require('./common/models/associations');
 
 async function syncDatabase() {
   try {
@@ -13,7 +8,7 @@ async function syncDatabase() {
     console.log('PostgreSQL bağlantısı başarılı!');
 
     await sequelize.sync();
-    console.log('Veritabanı tabloları başarıyla oluşturuldu!');
+    console.log('Veritabanı tabloları başarıyla senkronize edildi!');
   } catch (error) {
     console.error('Veritabanı hatası:', error.message);
     process.exitCode = 1;
