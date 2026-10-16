@@ -5,6 +5,7 @@ require('./common/models/Location');
 require('./common/models/Event');
 require('./common/models/Ticket');
 require('./common/models/Registration');
+require('./common/models/Payment');
 
 async function syncDatabase() {
   try {
