@@ -1,5 +1,7 @@
 const sequelize = require('./common/database');
 require('./common/models/User');
+require('./common/models/Category');
+require('./common/models/Location');
 
 async function syncDatabase() {
   try {
